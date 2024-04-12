@@ -23,9 +23,9 @@
             <a class="nav-link" onclick="home()">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" onclick="about()">About us</a>
+            <a class="nav-link" >About us</a>
           <li class="nav-item">
-            <a class="nav-link">Services Offered</a>
+            <a class="nav-link" onclick="services()">Services Offered</a>
           </li>  
           </li>
           <li class="nav-item">
@@ -35,7 +35,7 @@
       </div>
     </div>
   </nav>
-  <div class="home container bg-white" id="about" style="display:none;">
+  <div class="home container bg-white" id="services" style="display:none;">
     <h1 class="text-center">SAMPLE PLANTS</h1>
     <div class="row">
       <div class="col-lg-3 col-6"><img src="Images/plant1.jpg" alt="" class="p-1 w-100">
@@ -59,8 +59,52 @@
       <p class="text-center">Plant 8</p></div>
 </div>
   </div>
-  <div class="container-fluid bg-dark" style="height: 600px; display: none" id="contact">
-    a
+  <div class="container-fluid" style="height: 600px; display: none" id="contact">
+    
+<div class="flex items-center min-h-screen bg-gray-100 dark:bg-gray-900">
+  <div class="container mx-auto mt-5">
+    <div class="max-w-lg mx-auto my-20 bg-white p-5 rounded-md shadow-lg">
+      <div class="text-center">
+        <h1 class="my-3 text-3xl font-semibold text-black dark:text-gray-200">
+          Contact Us
+        </h1>
+        <p class="text-gray-600 dark:text-gray-400">
+          Fill up the form below to send us a message.
+        </p>
+      </div>
+      <div class="m-7 d-flex justify-content-center align-items-center">
+        <form action="https://api.web3forms.com/submit" method="POST" id="form">
+          <input type="hidden" name="access_key" value="dd325958-834b-48f8-8128-352972469f91" />
+          <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+          <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+          <input type="checkbox" name="botcheck" id="" style="display: none;" />
+          <div class="mb-6">
+            <label for="name" class="block mb-2 font-medium text-sm text-gray-600 dark:text-gray-400">Full Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name" required  />
+          </div>
+          <div class="mb-6">
+            <label for="email" class="block mb-2 font-medium text-sm text-gray-600 dark:text-gray-400">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="you@company.com" required  />
+          </div>
+          <div class="mb-6">
+            <label for="phone" class="text-sm mb-2 font-medium text-gray-600 dark:text-gray-400">Phone Number</label>
+            <input type="text" name="phone" id="phone" placeholder="09123456789" required />
+          </div>
+          <div class="mb-6">
+            <label for="message" class="block mb-2 font-medium text-sm text-gray-600 dark:text-gray-400">Your Message</label>
+            <textarea rows="5" name="message" id="message" class="w-100" required></textarea>
+          </div>
+          <div class="mb-6 text-center">
+            <button type="submit" class="btn btn-primary">
+              Send Message
+            </button>
+          </div>
+          <p class="text-base text-center text-gray-400" id="result"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
   </div>
   <script src="script.js"></script>
 </body>
